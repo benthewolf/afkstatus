@@ -1,4 +1,4 @@
-## Stealth ME Baseplate
+##  Baseplate
 
 ### How to install
 
