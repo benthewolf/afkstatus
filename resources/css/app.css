@@ -1,10 +1,13 @@
 /* Import Tailwind CSS framework */
-@import 'tailwindcss';
+@import "tailwindcss";
 
 /* Custom theme configuration with system font stack */
 @theme {
-    --font-sans: 'Inter var', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
+    /* font family*/
+    --font-solah: "Vpssolah", "sans-serif";
+
+    /* color */
+    --color-primary: #bc1010;
 }
 
 /* Include Tailwind CSS plugins for enhanced form styling and typography */
@@ -12,11 +15,23 @@
 @plugin '@tailwindcss/typography';
 
 /* Remove default red box-shadow on invalid form elements */
-input:invalid, textarea:invalid, select:invalid {
+input:invalid,
+textarea:invalid,
+select:invalid {
     box-shadow: none;
 }
 
 /* Hide elements with x-cloak attribute (used with Alpine.js) until JavaScript loads */
 [x-cloak] {
     display: none;
+}
+
+/* vpssolah */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Vpssolah";
+    font-style: normal;
+    font-weight: 700;
+    src: url("/public/fonts/vpssolah.woff2"),
+        url("/public/fonts/vpssolah.woff") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
