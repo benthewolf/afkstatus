@@ -13,4 +13,11 @@ class HomeHelpers
             'video' => landinghelper('lofi.mp4')
         ]);
     }
+
+    public static function getHero2()
+    {
+        return convertArrToObj([
+            'video' => landinghelper('puddle.mp4')
+        ]);
+    }
 }
